@@ -6,4 +6,3 @@ Source code for the [Agawi TouchMarks](http://appglimpse.com/touchmarks) benchma
 Still to be released:
 - Touchscope schematics
 - Arduino sketch
-- Licenses
