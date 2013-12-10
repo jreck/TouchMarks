@@ -14,7 +14,7 @@ public class LatencyTest
     implements GLSurfaceView.Renderer
 {
 
-    private boolean pressed = false;
+    private volatile boolean pressed = false;
 
     @Override
     public void onCreate( final android.os.Bundle savedInstanceState )
@@ -33,11 +33,13 @@ public class LatencyTest
                         pressed = false;
                         break;
                     }
+                    requestRender();
                     return true;
                 }
                 
             };
         surface.setRenderer( this );
+        surface.setRenderMode(GLSurfaceView.RENDERMODE_WHEN_DIRTY);
         setContentView( surface );
     }
 
